@@ -55,10 +55,8 @@ function genFlight(lat,lng,altitude,hdg)
 
 function makeSquawk(){ //Inefficient JS by Brin :-)
     final = "";
-    one = Math.ceil(Math.random() * 10);
-    two = Math.ceil(Math.random() * 10); 
-    three = Math.ceil(Math.random() * 10);
-    four = Math.ceil(Math.random() * 10); 
-    final+=one+""+two+""+three+""+four
+    for(var i=0; i<4; i++){
+        final+= Math.ceil(Math.random() * 9); 
+    }
     return final;
 }
