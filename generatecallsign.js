@@ -17,8 +17,7 @@ function newAircraft()
 }
 
 
-var airlines = {
-"N/A",
+var airlines = [
 "RNX",
 "TFU",
 "TTF",
@@ -2970,4 +2969,4 @@ var airlines = {
 "AOW",
 "CBG",
 "SJM",
-};
+];
