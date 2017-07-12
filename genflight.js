@@ -1,18 +1,20 @@
 function genFlight(lat,lng,altitude,hdg)
 {
     var callsign = newAircraft(); //Yes, we even make their callsign for you.  See generatecallsign.js for a list of airlines.
-    var randSq = Math.ceil(Math.random() * 10); 
-    var squawk = 7777+randSq*1000; //Every aircraft has a randomised squawk.
+    var squawk = makeSquawk(); //A very inefficient way to do this.  But I'll do it this way anyway.
+    var heading;
+    var alt;
     // Spacer
     if(!hdg){
-        var heading = 360; //Standard hdg.  We start North.
+        heading = 360; //Standard hdg.  We start North.
     }else{
-        var heading = hdg;
+        heading = hdg;
     }
+    
     if(!altitude){
-        var alt = 27; //Field elevation.
+        alt = 27; //Field elevation.  This is for JFK currently.
     }else{
-        var alt = altitude; //Pulls from the altitude input.
+        alt = altitude; //Pulls from the altitude input.
     }
     var gs = 1; //Ground Speed
     var cdr = 1800; //Climb/Descent Rate
@@ -49,4 +51,14 @@ function genFlight(lat,lng,altitude,hdg)
         cruisealt + ":" + route + ":" + voicetype + ":" + squawk + ":S:" + lat + ":" + lng + ":" +
         alt + ":" + gs + ":" + heading; //Please don't mess with this.  This is what makes your file work.
     return out;
+}
+
+function makeSquawk(){ //Inefficient JS by Brin :-)
+    final = "";
+    one = Math.ceil(Math.random() * 10);
+    two = Math.ceil(Math.random() * 10); 
+    three = Math.ceil(Math.random() * 10);
+    four = Math.ceil(Math.random() * 10); 
+    final+=one+""+two+""+three+""+four
+    return final;
 }
