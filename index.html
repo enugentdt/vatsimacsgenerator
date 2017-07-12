@@ -40,6 +40,7 @@
             lat = lat.toFixed(10);
             var lng = pnt.lng();
             lng = lng.toFixed(10);
+	    console.log(document.getElementById("heading").value);
             coordsLabel.innerHTML += genFlight(lat, lng, document.getElementById("altitude").value, document.getElementById("heading").value) + "\n";
         }
     </script>
