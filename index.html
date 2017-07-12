@@ -44,8 +44,14 @@
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw_8PQoMzOB3T9F-s1oRS6UJjZ7wvpuQc&callback=myMap"></script>
-    <div id="tdCursor" style="padding-right: 10px; padding-top: 10px; display: inline-block; float: left;">
-        <textarea style="resize: none;" onclick="this.focus();this.select()" readonly="readonly" id="textLoc"></textarea>
+    <div id="tdCursor" style="padding-right: 10px; padding-top: 0; display: inline-block; float: left;">
+        <form>
+		<textarea style="resize: none; padding:0; margin:0;" onclick="this.focus();this.select()" readonly="readonly" id="textLoc"></textarea><br>
+		<p style="display:inline-block; padding-right:10px; padding-left: 20px;">Altitude:</p>
+		<input placeholder="10000" style="display:inline-block;">
+		<button type="reset" value="reset" style="margin-left:30px; margin-right:30px;">Reset</button>
+		<button value="download" onclick="download();">Download as .acs</button>
+		</form>
     </div>
     <script>
         console.log(screen.width);
@@ -53,8 +59,8 @@
         var hei = window.innerHeight;
         document.getElementById("map").style.width = wid / 3 * 2 + "px";
         document.getElementById("map").style.height = hei + "px";
-        document.getElementById("textLoc").style.width = wid / 3 - 20 + "px";
-        document.getElementById("textLoc").style.height = hei - 30 + "px";
+        document.getElementById("textLoc").style.width = wid / 3 - 30 + "px";
+        document.getElementById("textLoc").style.height = hei - 50 + "px";
     </script>
 </body>
 
