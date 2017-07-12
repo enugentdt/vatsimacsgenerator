@@ -1,10 +1,14 @@
-function genFlight(lat,lng)
+function genFlight(lat,lng,altitude)
 {
     var callsign = newAircraft();
     var squawk = 3001;
     // Spacer
     var heading = 010;
-    var alt = 27;
+    if(isNaN(altitude)){
+        var alt = 27; //Field elevation.
+    }else{
+        var alt = altitude; //Pulls from the altitude input.
+    }
     var gs = 1;
     var cdr = 1800;
     var type = "I"; // IFR (I) or VFR (V)
