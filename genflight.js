@@ -4,7 +4,7 @@ function genFlight(lat,lng,altitude,hdg)
     var randSq = Math.ceil(Math.random() * 10); 
     var squawk = 7777+randSq*1000; //Every aircraft has a randomised squawk.
     // Spacer
-    if(!heading){
+    if(!hdg){
         var heading = 360; //Standard hdg.  We start North.
     }else{
         var heading = hdg;
