@@ -4,7 +4,7 @@ function genFlight(lat,lng,altitude)
     var squawk = 3001;
     // Spacer
     var heading = 010;
-    if(isNaN(altitude)){
+    if(altitude==""){
         var alt = 27; //Field elevation.
     }else{
         var alt = altitude; //Pulls from the altitude input.
