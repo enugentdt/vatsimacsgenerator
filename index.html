@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <body style="margin: 0;">
     <div id="map" style="width: 100px; height: 100px; display: inline-block; float: right;">
     </div>
@@ -11,10 +12,19 @@
     <script src="genflight.js"></script>
     <script>
         function myMap() {
+            var myStyles = [{
+                featureType: "poi",
+                elementType: "labels",
+                stylers: [{
+                    visibility: "off"
+                }]
+            }];
+
             var mapOptions = {
                 center: new google.maps.LatLng(40.640, -73.773),
                 zoom: 10,
-                mapTypeId: google.maps.MapTypeId.HYBRID
+                mapTypeId: google.maps.MapTypeId.HYBRID,
+                styles: myStyles
             }
 
             var map = new google.maps.Map(document.getElementById("map"), mapOptions)
@@ -32,7 +42,6 @@
             lng = lng.toFixed(10);
             coordsLabel.innerHTML += genFlight(lat, lng) + "\n";
         }
-
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw_8PQoMzOB3T9F-s1oRS6UJjZ7wvpuQc&callback=myMap"></script>
     <div id="tdCursor" style="padding-right: 10px; padding-top: 10px; display: inline-block; float: left;">
@@ -48,4 +57,5 @@
         document.getElementById("textLoc").style.height = hei - 30 + "px";
     </script>
 </body>
+
 </html>
