@@ -1,9 +1,13 @@
-function genFlight(lat,lng,altitude)
+function genFlight(lat,lng,altitude,hdg)
 {
     var callsign = newAircraft();
     var squawk = 3001;
     // Spacer
-    var heading = 010;
+    if(!heading){
+        var heading = 010;
+    }else{
+        var heading = hdg;
+    }
     if(!altitude){
         var alt = 27; //Field elevation.
     }else{
