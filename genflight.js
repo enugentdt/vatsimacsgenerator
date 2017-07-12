@@ -61,7 +61,7 @@ function makeSquawk(){ //Inefficient JS by Brin :-)
     return final;
 }
 
-function saveTextAsFile(textToWrite)
+function download(textToWrite)
 {
     var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
     var fileNameToSaveAs = "aircraftfile.acs";
