@@ -3,7 +3,7 @@
 Written by Eamonn Nugent and Brin Brody under the "Beer-ware" license.
 
 ## Usage
-To use, simply visit [this link](https://demilletech.github.io/eamonn-random/Web/VATSIMAircraftGenerator/index.html).
+To use, simply visit [this link](https://demilletech.github.io/vatsimacsgenerator/).
 At the moment, the code is written for flights from JFK. To make it work with your own airport, edit `genflight.js`
 to have your airport in the `depaprt` var.
 
