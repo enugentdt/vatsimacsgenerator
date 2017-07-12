@@ -21,7 +21,7 @@ GET variable.
 In `genflight.js`, you should see a line that says `var depaprt = "KJFK";`. Edit this line to say `var depaprt = "YOUR_AIRPORT";`
 
 ## Routing
-Currently, all aircraft are written to proceed DIRECT. In a future revision, FAA PRD routing will be followed.
+Currently, all aircraft are written to follow FAA PRD routing.
 If no routing is found through the PRD API, then the aircraft will proceed DIRECT.
 
 ## Note
