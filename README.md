@@ -23,3 +23,6 @@ In `genflight.js`, you should see a line that says `var depaprt = "KJFK";`. Edit
 ## Routing
 Currently, all aircraft are written to proceed DIRECT. In a future revision, FAA PRD routing will be followed.
 If no routing is found through the PRD API, then the aircraft will proceed DIRECT.
+
+## Note
+In order for the webpage to not appear with a BLOCKED_BY_CLIENT error, you MUST turn any adblocking software off prior to use.
