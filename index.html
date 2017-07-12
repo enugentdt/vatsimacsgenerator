@@ -40,8 +40,7 @@
             lat = lat.toFixed(10);
             var lng = pnt.lng();
             lng = lng.toFixed(10);
-			console.log(document.getElementById("altitude").value);
-            coordsLabel.innerHTML += genFlight(lat, lng, document.getElementById("altitude").value) + "\n";
+            coordsLabel.innerHTML += genFlight(lat, lng, document.getElementById("altitude").value, document.getElementById("heading").value) + "\n";
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw_8PQoMzOB3T9F-s1oRS6UJjZ7wvpuQc&callback=myMap"></script>
@@ -54,7 +53,7 @@
 		<input placeholder="080" style="display:inline-block;" id="heading"><br>
 		<button onclick="document.getElementById('textLoc').innerHTML='';" type="reset" value="reset" style="margin-left:30px; margin-right:30px;">Reset</button>
 		<button value="download" onclick="download();">Download as .acs</button>
-		</form>
+	</form>
     </div>
     <script>
         console.log(screen.width);
