@@ -1,9 +1,9 @@
 function genFlight(lat,lng,altitude,hdg, arprt)
 {
     var airport;
-    if(arprt==""){
+    if(!arprt){
         airport = "KJFK";
-    } else{
+    }else{
         airport = arprt;
     }
     var callsign = newAircraft(); //Yes, we even make their callsign for you.  See generatecallsign.js for a list of airlines.
@@ -20,17 +20,8 @@ function genFlight(lat,lng,altitude,hdg, arprt)
     var depaprt;
     if(!altitude){
         alt = 27; //Field elevation.  This is for JFK currently.
-        depaprt = airport;
-        while(depaprt==arraprt){
-            arraprt = genAirport();
-        }
     }else{
         alt = altitude; //Pulls from the altitude input.
-        depaprt = genAirport();
-         arraprt = arprt;
-         if(arrprt==""){
-            arraprt = "KORD"; //If you fail to put in an airport in altitude mode, the airport will be O'Hare
-        }
     }
     var gs = 1; //Ground Speed
     var cdr = 1800; //Climb/Descent Rate
