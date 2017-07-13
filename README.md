@@ -4,7 +4,7 @@ Written by Eamonn Nugent and Brin Brody under the "Beer-ware" license.
 
 ## Usage
 To use, simply visit [this link](https://demilletech.github.io/vatsimacsgenerator/).
-At the moment, the code is written for flights to and from KJFK. To make it work with your own airport, see `Add My Airport`.
+At the moment, the code is written for flights to and from KJFK. To make it work with your own airport, see `Add My Airport`.  Click where you would like to create an aircraft on the airport, and it will create one for you.
 
 ### Creating a flight
 Zoom into the airport of your choice, and click anywhere on the map.  This field defaults to KJFK.  To change the default location, see the `Change Default Airport` section. On the left-hand side, a flightplan should show up in a format that can be used by TWRTrainer. Copy the text when completed, and save as a .acs file anywhere you'd like. NOTE: The current source encodes for departures from KJFK. If you want to change this, see the `Add My Airport` section. 
