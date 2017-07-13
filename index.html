@@ -31,7 +31,7 @@
             var lng = pnt.lng();
             lng = lng.toFixed(10);
 	    console.log(document.getElementById("heading").value);
-            coordsLabel.innerHTML += genFlight(lat, lng, document.getElementById("altitude").value, document.getElementById("heading").value, document.getElementById("airport") + "\n";
+            coordsLabel.innerHTML += genFlight(lat, lng, document.getElementById("altitude").value, document.getElementById("heading").value, document.getElementById("airport")) + "\n";
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw_8PQoMzOB3T9F-s1oRS6UJjZ7wvpuQc&callback=myMap"></script>
@@ -54,7 +54,7 @@
         document.getElementById("map").style.width = wid / 3 * 2 + "px";
         document.getElementById("map").style.height = hei + "px";
         document.getElementById("textLoc").style.width = wid / 3 - 30 + "px";
-        document.getElementById("textLoc").style.height = hei - 100 + "px";
+        document.getElementById("textLoc").style.height = hei - 120 + "px";
     </script>
 </body>
 
