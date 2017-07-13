@@ -1,7 +1,8 @@
-var airport = "KJFK"; //Change this to change the airport the program works for.
+
 
 function genFlight(lat,lng,altitude,hdg)
 {
+    var airport = document.getElementById("airport").value;
     var callsign = newAircraft(); //Yes, we even make their callsign for you.  See generatecallsign.js for a list of airlines.
     var squawk = makeSquawk(); //A very inefficient way to do this.  But I'll do it this way anyway.
     var heading;
