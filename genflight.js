@@ -3,7 +3,7 @@
 function genFlight(lat,lng,altitude,hdg, arprt)
 {
     var airport;
-    if(!arprt){
+    if(airprt==""){
         airport = "KJFK";
     } else{
         airport = arprt;
