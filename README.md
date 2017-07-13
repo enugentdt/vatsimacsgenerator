@@ -25,4 +25,4 @@ Currently, all aircraft are written to follow FAA PRD routing.
 If no routing is found through the PRD API, then the aircraft will proceed DIRECT.
 
 ## Note
-In order for the webpage to not appear with a BLOCKED_BY_CLIENT error, you MUST turn any adblocking software off prior to use.
+In order for the webpage to not appear with a BLOCKED_BY_CLIENT error, you MUST turn any adblocking software off prior to use.  This webpage is NOT optimised for mobile usage at this time.
