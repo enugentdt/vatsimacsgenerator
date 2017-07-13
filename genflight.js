@@ -1,3 +1,5 @@
+var airport = "KJFK"; //Change this to change the airport the program works for.
+
 function genFlight(lat,lng,altitude,hdg)
 {
     var callsign = newAircraft(); //Yes, we even make their callsign for you.  See generatecallsign.js for a list of airlines.
@@ -15,6 +17,8 @@ function genFlight(lat,lng,altitude,hdg)
         alt = 27; //Field elevation.  This is for JFK currently.
     }else{
         alt = altitude; //Pulls from the altitude input.
+        depaprt = genAirport();
+        arraprt = airport;
     }
     var gs = 1; //Ground Speed
     var cdr = 1800; //Climb/Descent Rate
@@ -22,13 +26,13 @@ function genFlight(lat,lng,altitude,hdg)
     // Newline
     var actype = genICAO(); 
     var cruisespeed = 400;
-    var depaprt = "KJFK"; //Change to change route start points.
-    var deptime = 1755;
+    var depaprt = airport;
+    var deptime = 1755; //Inaccurate
     var randNum = Math.ceil(Math.random() * 10); 
     var cruisealt = 30000 + randNum * 1000; //Unless specified in the PRD, randomly generated.
     var arraprt = genAirport(); //Generated randomly
-    var enroutehrs = 4;
-    var enroutemins = 50;
+    var enroutehrs = 4; //Inaccurate
+    var enroutemins = 50; //Inaccurate
     // Newline
     var routeData = getRoute(depaprt, arraprt); //Get PRD info
     var route = "DIRECT"; //If there's no entry in the PRD, go direct.
