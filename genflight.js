@@ -26,7 +26,9 @@ function genFlight(lat,lng,altitude,hdg, arprt)
         }
     }else{
         alt = altitude; //Pulls from the altitude input.
-        depaprt = genAirport();
+        while(depaprt==arraprt){
+            depaprt = genAirport();
+        }
         arraprt = airport;
     }
     var gs = 1; //Ground Speed
