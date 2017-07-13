@@ -26,8 +26,10 @@ function genFlight(lat,lng,altitude,hdg, arprt)
         }
     }else{
         alt = altitude; //Pulls from the altitude input.
-        while(depaprt==arraprt){
+        if(!arprt){
             depaprt = genAirport();
+        }else{
+            depaprt = "KORD"; //If you fail to put in an airport in altitude mode, the airport will be O'Hare
         }
         arraprt = airport;
     }
