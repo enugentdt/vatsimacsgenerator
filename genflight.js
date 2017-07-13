@@ -26,12 +26,13 @@ function genFlight(lat,lng,altitude,hdg, arprt)
         }
     }else{
         alt = altitude; //Pulls from the altitude input.
+        depaprt = genAirport();
         if(!arprt){
-            depaprt = genAirport();
+            arraprt = airport;
         }else{
-            depaprt = "KORD"; //If you fail to put in an airport in altitude mode, the airport will be O'Hare
+            arraprt = "KORD"; //If you fail to put in an airport in altitude mode, the airport will be O'Hare
         }
-        arraprt = airport;
+        
     }
     var gs = 1; //Ground Speed
     var cdr = 1800; //Climb/Descent Rate
