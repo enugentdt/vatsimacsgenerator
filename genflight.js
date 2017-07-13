@@ -21,16 +21,16 @@ function genFlight(lat,lng,altitude,hdg, arprt)
     if(!altitude){
         alt = 27; //Field elevation.  This is for JFK currently.
         depaprt = airport;
-        while(depaprt==arraprt){
+        do{
             arraprt=genAirport();
-        }
+        } while(depaprt==arraprt);
         console.log("Ground Mode: "+depaprt+","+arraprt);
     }else{
         alt = altitude; //Pulls from the altitude input.
         arraprt = airport;
-        while(arraprt==depaprt){
+        do {
             depaprt=genAirport();
-        }
+        } while(arraprt==depaprt)
         console.log("Air Mode: "+depaprt+","+arraprt);
     }
     var gs = 1; //Ground Speed
