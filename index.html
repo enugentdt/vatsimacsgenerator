@@ -13,19 +13,19 @@
     <script>
         function myMap() {
             var myStyles = [{
-                featureType: "all", //Change "all" to "poi" if you want labels but not POIs
-                elementType: "labels",
-                stylers: [{
-                    visibility: "off"
-                }]
-            },
-			{
-                featureType: "airport", //airports, don't touch it
+                featureType: "poi.airport", //Change "all" to "poi" if you want labels but not POIs
                 elementType: "labels",
                 stylers: [{
                     visibility: "on"
                 }]
-            }
+            },
+			{
+				featureType: "all",
+				elementType: "labels",
+				stylers: [{
+					visibility: "on"
+				}]
+			}
 			];
             var mapOptions = {
                 center: new google.maps.LatLng(40.64,-73.78),
