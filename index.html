@@ -31,7 +31,7 @@
             var lng = pnt.lng();
             lng = lng.toFixed(10);
 	    console.log(document.getElementById("heading").value);
-            coordsLabel.innerHTML += genFlight(lat, lng, document.getElementById("altitude").value, document.getElementById("heading").value) + "\n";
+            coordsLabel.innerHTML += genFlight(lat, lng, document.getElementById("altitude").value, document.getElementById("heading").value, document.getElementById("airport") + "\n";
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw_8PQoMzOB3T9F-s1oRS6UJjZ7wvpuQc&callback=myMap"></script>
@@ -43,7 +43,7 @@
 		<p style="display:inline-block; padding-left:20px; padding-right:10px;">Heading:</p>
 		<input placeholder="080" style="display:inline-block;" id="heading"><br>
 		<p style="display:inline-block; padding-left:20px; padding-right: 10px;">Airport Code:</p>
-		<input placeholder="KJFK" style="display:inline-block; margin-right:30px;" id="airport">
+		<input placeholder="KJFK" style="display:inline-block; margin-right:50px;" id="airport">
 		<button onclick="document.getElementById('textLoc').innerHTML='';" type="reset" value="reset">Reset</button>
 	</form>
     </div>
@@ -54,7 +54,7 @@
         document.getElementById("map").style.width = wid / 3 * 2 + "px";
         document.getElementById("map").style.height = hei + "px";
         document.getElementById("textLoc").style.width = wid / 3 - 30 + "px";
-        document.getElementById("textLoc").style.height = hei - 100 + "px";
+        document.getElementById("textLoc").style.height = hei - 120 + "px";
     </script>
 </body>
 
