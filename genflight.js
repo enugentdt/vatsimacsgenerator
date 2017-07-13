@@ -20,8 +20,10 @@ function genFlight(lat,lng,altitude,hdg, arprt)
     var depaprt;
     if(!altitude){
         alt = 27; //Field elevation.  This is for JFK currently.
-        arraprt = genAirport();
         depaprt = airport;
+        while(depaprt==arraprt){
+            arraprt = genAirport();
+        }
     }else{
         alt = altitude; //Pulls from the altitude input.
         depaprt = genAirport();
