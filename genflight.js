@@ -1,5 +1,3 @@
-
-
 function genFlight(lat,lng,altitude,hdg, arprt)
 {
     var airport;
@@ -14,13 +12,16 @@ function genFlight(lat,lng,altitude,hdg, arprt)
     var alt;
     // Spacer
     if(!hdg){
-        heading = 360; //Standard hdg.  We start North.
+        heading = 360; //Standard hdg.
     }else{
         heading = hdg;
     }
-    
+    var arraprt;
+    var depaprt;
     if(!altitude){
         alt = 27; //Field elevation.  This is for JFK currently.
+        arraprt = genAirport();
+        depaprt = airport;
     }else{
         alt = altitude; //Pulls from the altitude input.
         depaprt = genAirport();
@@ -32,11 +33,9 @@ function genFlight(lat,lng,altitude,hdg, arprt)
     // Newline
     var actype = genICAO(); 
     var cruisespeed = 400;
-    var depaprt = airport;
     var deptime = 1755; //Inaccurate
     var randNum = Math.ceil(Math.random() * 10); 
     var cruisealt = 30000 + randNum * 1000; //Unless specified in the PRD, randomly generated.
-    var arraprt = genAirport(); //Generated randomly
     var enroutehrs = 4; //Inaccurate
     var enroutemins = 50; //Inaccurate
     // Newline
@@ -69,31 +68,4 @@ function makeSquawk(){ //Inefficient JS by Brin :-)
         final+= Math.ceil(Math.random() * 9); 
     }
     return final;
-}
-
-function download(textToWrite)
-{
-    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-    var fileNameToSaveAs = "aircraftfile.acs";
-
-    var downloadLink = document.createElement("a");
-    downloadLink.download = fileNameToSaveAs;
-    downloadLink.innerHTML = "Download File";
-    if (window.webkitURL != null)
-    {
-        // Chrome allows the link to be clicked
-        // without actually adding it to the DOM.
-        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-    }
-    else
-    {
-        // Firefox requires the link to be added to the DOM
-        // before it can be clicked.
-        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-        downloadLink.onclick = destroyClickedElement;
-        downloadLink.style.display = "none";
-        document.body.appendChild(downloadLink);
-    }
-
-    downloadLink.click();
 }
