@@ -18,7 +18,15 @@
                 stylers: [{
                     visibility: "off"
                 }]
-            }];
+            },
+			{
+                featureType: "airport", //airports, don't touch it
+                elementType: "labels",
+                stylers: [{
+                    visibility: "on"
+                }]
+            }
+			];
             var mapOptions = {
                 center: new google.maps.LatLng(40.64,-73.78),
                 zoom: 14,
