@@ -3,7 +3,7 @@
 Written by Eamonn Nugent and Brin Brody under the "Beer-ware" license.
 
 ## Usage
-To use, simply visit [this link](https://demilletech.github.io/vatsimacsgenerator/).
+To use, simply visit [this link](https://enugentdt.github.io/vatsimacsgenerator/).
 At the moment, the code is written for flights to and from KJFK. To make it work with your own airport, see `Add My Airport`.  Click where you would like to create an aircraft on the airport, and it will create one for you.
 
 ### Creating a flight
