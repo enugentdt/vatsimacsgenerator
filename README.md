@@ -32,5 +32,10 @@ Current altitude is defined by the user in an input that is taken when they sele
 ## Updating the PRD
 At this time, the PRD is parsed from [the FAA's CSV data](https://www.fly.faa.gov/rmt/data_file/prefroutes_db.csv) and uploaded to the `routes.js` in readable format.  To update the PRD, either replace or supplement the contents of `routes.js` with your custom routes.  This is best used for the purposes of ARTCC/FIR preferred routes based on newly updated LOAs or SOPs.
 
+## Updating Airlines
+At this time, the following airlines can appear:
+"AAL", "DAL", "JBU", "FTA", "NKS", "UAL", "FFT", "AAL", "AAY", "HAL", "SWA", "SCX", "VRD", "EDV", "RPA"
+Add to, or remove from this list in `generatecallsign.js` to add or remove airlines.
+
 ## Note
 In order for the webpage to not appear with a BLOCKED_BY_CLIENT error, you MUST turn any adblocking software off prior to use.  This webpage is NOT optimised for mobile usage at this time.
