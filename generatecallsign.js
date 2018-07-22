@@ -18,30 +18,5 @@ function newAircraft()
 
 
 var airlines = [
-    "AAL",
-    "DAL",
-    "JBU",
-    "FTA",
-    "NKS",
-    "UAL",
-    "FFT",
-    "AAY", 
-    "HAL", 
-    "SWA", 
-    "SCX", 
-    "VRD", 
-    "EDV", 
-    "RPA",
-    "BAW",
-    "ASA",
-    "GTI",
-    "CXA",
-    "AAH",
-    "BOE",
-    "UCA",
-    "CPZ",
-    "COA",
-    "VTS",
-    "FDX",
-    "UPS"
+    'ASA', 'AAY', 'AAL', 'DAL', 'FFT', 'HAL', 'JBU', 'SWA', 'NKS', 'SCX', 'UAL', 'AWI', 'KAP', 'UCA', 'CPZ', 'VTE', 'MNU', 'EDV', 'ENY', 'ASQ', 'GJS', 'GLA', 'QXE', 'ASH', 'PEN', 'PDT', 'JIA', 'RVF', 'RPA', 'SIL', 'SKW', 'LOF', 'SRY', 'DYN', 'WBR', 'RSI', 'BRG', 'BTQ', 'VTS', 'FTA'
 ];
